@@ -7,7 +7,7 @@ $bitly_name='XXX';
 $bitly_key='XXXX';
 
 
-$gyazo_url = $_SERVER['SERVER_NAME']; 
+$gyazo_url = 'http://'.$_SERVER['SERVER_NAME']; 
 $company_name='my_company';
 
 //AWS Credentials
