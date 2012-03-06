@@ -1,0 +1,30 @@
+#url1, #url2 {
+        width:150px;
+}
+#url2 {
+}
+.copy {
+        display:inline-block;
+        height:16px;
+        width:16px;
+        background:url(../images/copy.png);
+        position:relative;
+        top:3px;
+}
+.copy:hover {
+        opacity:0.5;
+        cursor:pointer;
+}
+.copied {
+        display:inline-block;
+        height:16px;
+        width:16px;
+        background:url(../images/copied.png);
+        position:relative;
+        top:3px;
+        margin-left:5px;
+}
+.wrap {
+        display:block;
+        width:300px;
+}

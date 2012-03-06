@@ -50,27 +50,22 @@ if(isset($_FILES['imagedata']['name'])) {
 
 $limage=$_GET['limage'];
 $shorten =  get_bitly_short_url($limage,$bitly_name,$bitly_key);
-list($width, $height, $type, $attr) = getimagesize($limage);
-
-include ('scripts/html5-canvas-drawing-app.js.php');
-
 echo "<head>
 <link rel='shortcut icon' href=$limage>
 <link rel='stylesheet' href='styles/style.css'>
+</head>
 
 
-<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js'></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
 <script src='scripts/jquery.zclip.min.js'></script>
 <script type='text/javascript' src='scripts/copy.js'></script>
-</head>
+
 <span class='wrap'><input id='url1' type='text' value=$shorten> <span class='copy' id='copy1'></span></span>
 <hr />
-<body>
-    <div id='canvasDiv'></div>
-    <script type='text/javascript'> $(document).ready(function() {
-    	 prepareCanvas();
-});</script>
-  </body>
-";
+<img src=$limage>";
+
+
+
 } 
+
 ?>
