@@ -1,20 +1,9 @@
 <?php
 require('files/S3.php');
-
-
-//Bitly credentials
-$bitly_name='XXX';
-$bitly_key='XXXX';
-
-
+include ('settings.php');
 $gyazo_url = 'http://'.$_SERVER['SERVER_NAME']; 
-$company_name='my_company';
+//Bitly credentials
 
-//AWS Credentials
-$aws_key='XXX';
-$aws_secret='XXX';
-$aws_bucket='bucket_name';
-$aws_site='http://s3.amazonaws.com/';
 
 /* returns the shortened url */
 function get_bitly_short_url($url,$login,$appkey,$format='txt') {
